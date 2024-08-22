@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "./proto";
+
+service Email {
+    rpc Send(Request) returns(Response);
+}
+
+message Request {
+    string receiver = 1;
+    string subject  = 2;
+    string body     = 3;
+}
+
+message Response {
+    bool success = 1;
+}
