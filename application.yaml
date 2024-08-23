@@ -1,3 +1,12 @@
 server:
   port: 50051
 
+mail:
+  server: "smtp.outlook.com"
+  port: 587
+  account: "xxxxxx@outlook.com"
+  from: "Epic Games<xxxxxx@outlook.com>"
+
+env:
+  mail:
+    passwd: "EMAIL_PWD"

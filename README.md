@@ -1,6 +1,6 @@
 ## XMail
 
-这是一个用来发送邮件的 gRPC 服务，请在 [application.yaml](application.yaml) 中配置邮箱服务器。
+这是一个用来发送邮件的 gRPC 服务，请在 [application.yaml](application.yaml) 中配置邮箱服务器，使用 `env.mail.passwd` 配置环境变量名，用于设置邮箱密码。
 
 安装 protoc-gen-go 插件：
 ~~~bash

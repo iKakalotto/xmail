@@ -21,5 +21,13 @@ func main() {
 	defer conn.Close()
 
 	c := pb.NewEmailClient(conn)
-	_, _ = c.Send(context.Background(), &pb.Request{})
+	resp, err := c.Send(context.Background(), &pb.Request{
+		Receiver: "xxxxxx@xx.com",
+		Subject: "Test",
+		Body: "Hello world",
+	})
+
+	if !resp.Success {
+		golog.Errorf("Send mail failed! Error: %v", err)
+	}
 }
